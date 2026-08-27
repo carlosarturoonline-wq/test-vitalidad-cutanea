@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playbook de Reseteo Celular — Método CÉLOS | Céfiro Bio-Piel</title>
+<meta name="description" content="Tu protocolo de 7 días para resetear el ciclo de descanso nocturno y activar la regeneración celular de tu piel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sage:#8A9A86; --sage-deep:#6F8069; --sage-bright:#A9BBA1;
+    --cream:#F4F0EA; --white:#FFFFFF; --ink:#2B2F27; --ink-soft:#5B6155;
+    --alert:#C0714F; --alert-soft:#F2E3DA; --line:rgba(43,47,39,0.10);
+    --shadow-sm:0 2px 10px rgba(43,47,39,0.06); --shadow-md:0 10px 30px rgba(43,47,39,0.10);
+    --radius:20px; --radius-sm:12px;
+    --font-head:'Poppins','Segoe UI',system-ui,sans-serif; --font-body:'Inter','Segoe UI',system-ui,sans-serif;
+    --bg:var(--cream); --surface:var(--white); --text:var(--ink); --text-muted:var(--ink-soft); --border:var(--line);
+  }
+  html[data-theme="dark"]{
+    --bg:#1B1F19; --surface:#242922; --text:#EEEFE9; --text-muted:#A7AC9F;
+    --border:rgba(255,255,255,0.08); --shadow-sm:0 2px 10px rgba(0,0,0,0.25); --shadow-md:0 10px 30px rgba(0,0,0,0.35);
+    --alert-soft:rgba(192,113,79,0.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.brand{font-family:var(--font-head);}
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px 80px;}
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:22px 0;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;color:var(--sage-deep);}
+  html[data-theme="dark"] .brand{color:var(--sage-bright);}
+  .brand svg{width:22px;height:22px;}
+  .theme-toggle{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text);}
+  .theme-toggle svg{width:16px;height:16px;}
+
+  .hero{text-align:center;padding:20px 0 40px;}
+  .kicker{display:inline-block;background:rgba(138,154,134,0.16);color:var(--sage-deep);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 16px;border-radius:999px;margin-bottom:18px;}
+  html[data-theme="dark"] .kicker{color:var(--sage-bright);}
+  h1.title{font-size:clamp(28px,5vw,40px);font-weight:700;letter-spacing:-.01em;margin-bottom:14px;line-height:1.15;}
+  .lede{font-size:17px;color:var(--text-muted);max-width:520px;margin:0 auto;}
+
+  .mechanism-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-md);padding:32px;margin-bottom:36px;}
+  .mechanism-card h2{font-size:20px;margin-bottom:12px;}
+  .mechanism-card p{color:var(--text-muted);margin-bottom:12px;}
+  .mechanism-card p:last-child{margin-bottom:0;}
+  .mechanism-card .highlight{background:var(--alert-soft);color:var(--alert);padding:2px 8px;border-radius:6px;font-weight:700;}
+
+  .section-label{display:flex;align-items:center;gap:14px;margin:44px 0 20px;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);}
+  .section-label .line{flex:1;height:1px;background:var(--border);}
+  .section-label span{white-space:nowrap;}
+  .accordion-hint{display:flex;align-items:center;gap:8px;color:var(--text-muted);font-size:13.5px;margin:-8px 0 18px;}
+  .accordion-hint svg{width:16px;height:16px;color:var(--sage-deep);flex-shrink:0;}
+  html[data-theme="dark"] .accordion-hint svg{color:var(--sage-bright);}
+
+  details.day{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:14px;overflow:hidden;box-shadow:var(--shadow-sm);}
+  details.day[open]{box-shadow:var(--shadow-md);}
+  details.day summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;gap:16px;}
+  details.day summary::-webkit-details-marker{display:none;}
+  .day-num{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--sage-bright),var(--sage-deep));color:#fff;font-family:var(--font-head);font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .day-meta{flex:1;}
+  .day-title{font-weight:700;font-size:15.5px;}
+  .day-focus{font-size:13px;color:var(--text-muted);margin-top:2px;}
+  .chevron{width:20px;height:20px;color:var(--text-muted);transition:transform .2s ease;flex-shrink:0;}
+  details.day[open] .chevron{transform:rotate(180deg);}
+  .day-body{padding:0 24px 26px 80px;}
+  .day-body p{color:var(--text-muted);margin-bottom:14px;}
+  .day-body ul{margin:0 0 14px;padding-left:20px;}
+  .day-body li{color:var(--text-muted);margin-bottom:6px;}
+  .day-body li b{color:var(--text);}
+  @media (max-width:520px){ .day-body{padding-left:24px;} }
+
+  .resource-row{display:flex;flex-direction:column;gap:12px;margin-top:16px;}
+
+  .video-card{display:flex;gap:12px;align-items:center;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;background:var(--surface);text-decoration:none;padding:8px;transition:transform .15s ease, box-shadow .15s ease;}
+  .video-card:hover{transform:translateY(-1px);box-shadow:var(--shadow-sm);}
+  .video-thumb{position:relative;width:96px;height:64px;flex-shrink:0;border-radius:8px;overflow:hidden;background:#000;}
+  .video-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .play-badge{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+  .play-badge svg{width:26px;height:26px;filter:drop-shadow(0 1px 4px rgba(0,0,0,.5));}
+  .video-info{flex:1;min-width:0;}
+  .video-title{display:block;font-size:13.5px;font-weight:700;color:var(--text);margin-bottom:2px;}
+  .video-source{display:block;font-size:11.5px;color:var(--text-muted);}
+
+  .book-card{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;background:var(--surface);}
+  .book-icon{width:34px;height:34px;border-radius:9px;background:rgba(138,154,134,0.16);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .book-icon svg{width:17px;height:17px;color:var(--sage-deep);}
+  html[data-theme="dark"] .book-icon svg{color:var(--sage-bright);}
+  .book-title{font-size:13.5px;font-weight:700;}
+  .book-author{font-size:12px;color:var(--text-muted);}
+
+  .paper-card{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;background:var(--surface);text-decoration:none;transition:transform .15s ease, box-shadow .15s ease;}
+  .paper-card:hover{transform:translateY(-1px);box-shadow:var(--shadow-sm);}
+  .paper-icon{width:34px;height:34px;border-radius:9px;background:var(--alert-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .paper-icon svg{width:17px;height:17px;color:var(--alert);}
+  .paper-title{font-size:13.5px;font-weight:700;color:var(--text);}
+  .paper-source{font-size:12px;color:var(--text-muted);}
+
+  .refs-grid{display:flex;flex-direction:column;gap:12px;}
+  .sci-quote{font-style:italic;color:var(--text-muted);font-size:14px;margin-bottom:20px;}
+
+  .closing{background:linear-gradient(135deg,var(--sage-bright),var(--sage-deep));color:#fff;border-radius:var(--radius);padding:36px 32px;text-align:center;margin-top:50px;}
+  .closing h2{font-size:22px;margin-bottom:10px;}
+  .closing p{opacity:.92;max-width:480px;margin:0 auto;}
+  .closing-btn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--sage-deep);font-weight:700;font-size:14.5px;padding:14px 24px;border-radius:14px;margin-top:22px;text-decoration:none;transition:transform .15s ease, box-shadow .15s ease;box-shadow:0 8px 20px rgba(0,0,0,0.12);}
+  .closing-btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,0.16);}
+
+  .footer-note{text-align:center;font-size:12px;color:var(--text-muted);margin-top:40px;opacity:.75;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 3-6 6-6 10a6 6 0 0 0 12 0c0-4-2-7-6-10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      Céfiro Bio-Piel
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+      <svg id="themeIcon" viewBox="0 0 24 24" fill="none"><path d="M21 12.5A8.5 8.5 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <div class="hero">
+    <span class="kicker">Tu producto · Acceso completo</span>
+    <h1 class="title">Playbook de Reseteo Celular<br>Método CÉLOS</h1>
+    <p class="lede">Células Libres de Estrés y Oxidación Nocturna. Un protocolo de 7 días para alinear tu descanso con la capacidad natural de tu piel de regenerarse.</p>
+  </div>
+
+  <div class="mechanism-card">
+    <h2>El mecanismo detrás del método</h2>
+    <p>Tu piel no fabrica colágeno nuevo cuando quiere: lo hace en una ventana biológica muy específica. La evidencia científica muestra que la proliferación de queratinocitos alcanza su punto máximo alrededor de la medianoche — hasta 30 veces más alta que durante el día — justo cuando el cortisol debería estar en su nivel más bajo.</p>
+    <p>El problema no es que duermas pocas horas — es que los micro-despertares y el estrés vespertino mantienen el cortisol elevado durante esa ventana, dejando los vasos sanguíneos del rostro contraídos y bloqueando la reparación justo cuando más la necesitas.</p>
+    <p>CÉLOS no es una rutina más de skincare: es un reseteo neuro-metabólico de 7 días, con un enfoque distinto cada día, para devolverle a tu piel su capacidad natural de regenerarse mientras duermes.</p>
+  </div>
+
+  <div class="section-label"><span>Tu protocolo, día a día</span><div class="line"></div></div>
+  <p class="accordion-hint"><svg viewBox="0 0 24 24" fill="none"><path d="M9 11.5V6a2 2 0 1 1 4 0v5.5M13 11V4a2 2 0 1 1 4 0v9M17 9.5V7a2 2 0 1 1 4 0v7c0 4-2.5 7-7 7h-1c-3 0-4.2-1-5.5-2.7L4.8 14a1.8 1.8 0 0 1 2.7-2.3l1.5 1.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Toca cada día para desplegarlo — dentro encontrarás la explicación completa, tu acción concreta y el video o lectura recomendada.</p>
+
+  <!-- DAY 1 -->
+  <details class="day" open>
+    <summary>
+      <div class="day-num">1</div>
+      <div class="day-meta">
+        <div class="day-title">Entendiendo a tu enemigo invisible</div>
+        <div class="day-focus">El cortisol nocturno y por qué tus cremas no bastan</div>
+      </div>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="day-body">
+      <p>Hoy no vas a cambiar nada en tu rutina física. Tu única tarea es entender el mecanismo: el estrés diario eleva tu cortisol vespertino, y ese cortisol elevado le indica a tu cuerpo que siga "en alerta" en vez de entrar en modo reparación. Es la razón por la que las cremas caras y los rodillos de jade no han funcionado — están atacando la superficie de un problema que ocurre a nivel hormonal e interno.</p>
+      <ul>
+        <li><b>Acción de hoy:</b> anota a qué hora sientes el primer "bajón" de energía en la tarde — es tu pico de cortisol vespertino.</li>
+        <li><b>Acción de hoy:</b> observa si te despiertas entre la 1:00 AM y 3:00 AM, aunque sea unos segundos. Eso es un micro-despertar.</li>
+      </ul>
+      <div class="resource-row">
+        <a class="video-card" href="https://www.youtube.com/watch?v=SY0HkIpIaGc" target="_blank" rel="noopener noreferrer">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/SY0HkIpIaGc/hqdefault.jpg" alt="Activos contra el envejecimiento — Dra. Cristina Eguren" loading="lazy">
+            <span class="play-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#C0714F"/><path d="M10 8.5l6 3.5-6 3.5V8.5Z" fill="#fff"/></svg></span>
+          </div>
+          <div class="video-info">
+            <span class="video-title">Activos contra el envejecimiento</span>
+            <span class="video-source">Dra. Cristina Eguren, dermatóloga · Ver en YouTube</span>
+          </div>
+        </a>
+        <div class="book-card">
+          <div class="book-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5a2 2 0 0 1 2-2h11v16H6a2 2 0 0 0-2 2V5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 3v16" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <div><div class="book-title">Why We Sleep</div><div class="book-author">Matthew Walker, PhD — neurocientífico especializado en sueño</div></div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- DAY 2 -->
+  <details class="day">
+    <summary>
+      <div class="day-num">2</div>
+      <div class="day-meta">
+        <div class="day-title">Higiene de luz y ritmo circadiano</div>
+        <div class="day-focus">Reprograma la señal que le dice a tu piel cuándo reparar</div>
+      </div>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="day-body">
+      <p>Tu piel tiene su propio reloj biológico, sincronizado con la luz que reciben tus ojos. La luz azul de pantallas en la noche le dice a tu cerebro "todavía es de día", suprime la melatonina y retrasa el inicio de la ventana de reparación celular.</p>
+      <ul>
+        <li><b>Acción de hoy:</b> activa el modo de luz cálida en tus dispositivos desde las 8:00 PM.</li>
+        <li><b>Acción de hoy:</b> apaga pantallas 30-40 minutos antes de dormir; sustitúyelas por luz tenue y cálida en tu habitación.</li>
+        <li><b>Acción de hoy:</b> busca 10 minutos de luz natural directa en la mañana — ayuda a anclar todo tu ritmo circadiano del día.</li>
+      </ul>
+      <div class="resource-row">
+        <a class="video-card" href="https://www.youtube.com/watch?v=F4kzlyys1bA" target="_blank" rel="noopener noreferrer">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/F4kzlyys1bA/hqdefault.jpg" alt="Cronobiología: una guía para descubrir tu reloj biológico" loading="lazy">
+            <span class="play-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#C0714F"/><path d="M10 8.5l6 3.5-6 3.5V8.5Z" fill="#fff"/></svg></span>
+          </div>
+          <div class="video-info">
+            <span class="video-title">Cronobiología: una guía para descubrir tu reloj biológico</span>
+            <span class="video-source">Juan Antonio Madrid · Fac. de Veterinaria, UCM · Ver en YouTube</span>
+          </div>
+        </a>
+        <div class="book-card">
+          <div class="book-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5a2 2 0 0 1 2-2h11v16H6a2 2 0 0 0-2 2V5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 3v16" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <div><div class="book-title">El Código Circadiano (The Circadian Code)</div><div class="book-author">Dr. Satchin Panda — Instituto Salk de Estudios Biológicos</div></div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- DAY 3 -->
+  <details class="day">
+    <summary>
+      <div class="day-num">3</div>
+      <div class="day-meta">
+        <div class="day-title">Respiración 4-7-8 para bajar el cortisol</div>
+        <div class="day-focus">La técnica de 90 segundos que activa tu sistema de calma</div>
+      </div>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="day-body">
+      <p>Antes de aplicar cualquier producto, tu sistema nervioso necesita salir del modo "alerta". La técnica 4-7-8 activa tu sistema parasimpático en menos de dos minutos: inhala 4 segundos por la nariz, sostén 7 segundos, exhala 8 segundos por la boca. Repite 4 ciclos.</p>
+      <ul>
+        <li><b>Acción de hoy:</b> practica 4 ciclos de 4-7-8 justo antes de tu rutina de piel, sentada con la espalda recta.</li>
+      </ul>
+      <div class="resource-row">
+        <a class="video-card" href="https://www.youtube.com/watch?v=a4LxzATy-4Y" target="_blank" rel="noopener noreferrer">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/a4LxzATy-4Y/hqdefault.jpg" alt="Respiración relajante 4-7-8" loading="lazy">
+            <span class="play-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#C0714F"/><path d="M10 8.5l6 3.5-6 3.5V8.5Z" fill="#fff"/></svg></span>
+          </div>
+          <div class="video-info">
+            <span class="video-title">Respiración relajante 4-7-8</span>
+            <span class="video-source">#CuidarteEsCuidarnos · Ver en YouTube</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </details>
+
+  <!-- DAY 4 -->
+  <details class="day">
+    <summary>
+      <div class="day-num">4</div>
+      <div class="day-meta">
+        <div class="day-title">Drenaje linfático facial exprés</div>
+        <div class="day-focus">Libera la tensión y la retención acumulada en el rostro</div>
+      </div>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="day-body">
+      <p>La tensión del día se acumula literalmente en tu mandíbula, pómulos y contorno de ojos. Un drenaje linfático de 3-4 minutos con las yemas de los dedos activa la microcirculación y ayuda a reducir la hinchazón matutina.</p>
+      <ul>
+        <li><b>Acción de hoy:</b> con la piel limpia, realiza movimientos suaves desde el centro del rostro hacia las orejas y el cuello, sin estirar la piel.</li>
+      </ul>
+      <div class="resource-row">
+        <a class="video-card" href="https://www.youtube.com/watch?v=PrCoqO76Hio" target="_blank" rel="noopener noreferrer">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/PrCoqO76Hio/hqdefault.jpg" alt="Tutorial masaje para drenaje linfático" loading="lazy">
+            <span class="play-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#C0714F"/><path d="M10 8.5l6 3.5-6 3.5V8.5Z" fill="#fff"/></svg></span>
+          </div>
+          <div class="video-info">
+            <span class="video-title">Tutorial: masaje para drenaje linfático</span>
+            <span class="video-source">Cristina, enfermera · Ver en YouTube</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </details>
+
+  <!-- DAY 5 -->
+  <details class="day">
+    <summary>
+      <div class="day-num">5</div>
+      <div class="day-meta">
+        <div class="day-title">Nutrición nocturna y cofactores de colágeno</div>
+        <div class="day-focus">Los "ladrillos" que tu piel necesita mientras duermes</div>
+      </div>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="day-body">
+      <p>Ningún producto tópico puede reparar una matriz extracelular desnutrida. El colágeno hidrolizado sin sus cofactores (vitamina C, zinc, silicio) es poco eficiente. Hoy es el día de conectar lo que comes con lo que tu piel puede reconstruir por la noche.</p>
+      <ul>
+        <li><b>Acción de hoy:</b> incluye en tu cena una fuente de vitamina C (pimiento, cítricos) junto con una proteína magra.</li>
+        <li><b>Acción de hoy:</b> revisa la Guía de Nutri-Cosmética Celular (tu segundo bono) para el menú semanal completo.</li>
+      </ul>
+      <div class="resource-row">
+        <a class="video-card" href="https://www.youtube.com/watch?v=oYo_D5Mq9D0" target="_blank" rel="noopener noreferrer">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/oYo_D5Mq9D0/hqdefault.jpg" alt="Colágeno y vitamina C: la dupla perfecta para la piel" loading="lazy">
+            <span class="play-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#C0714F"/><path d="M10 8.5l6 3.5-6 3.5V8.5Z" fill="#fff"/></svg></span>
+          </div>
+          <div class="video-info">
+            <span class="video-title">Colágeno y vitamina C: la dupla perfecta para la piel</span>
+            <span class="video-source">Ver en YouTube</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </details>
+
+  <!-- DAY 6 -->
+  <details class="day">
+    <summary>
+      <div class="day-num">6</div>
+      <div class="day-meta">
+        <div class="day-title">Barrera cutánea y ácidos grasos esenciales</div>
+        <div class="day-focus">Evita la pérdida de agua transepidérmica durante la noche</div>
+      </div>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="day-body">
+      <p>El Omega-3 y el GLA mantienen intacta tu barrera hidrolipídica, la capa que evita que tu piel pierda agua mientras duermes. Una barrera comprometida es la razón por la que, aunque hidrates mucho, sigues despertando con la piel tirante o apagada.</p>
+      <ul>
+        <li><b>Acción de hoy:</b> incluye una porción de pescado azul, nueces o semillas de chía en tu alimentación.</li>
+      </ul>
+      <div class="resource-row">
+        <a class="video-card" href="https://www.youtube.com/watch?v=053LXJ651Ds" target="_blank" rel="noopener noreferrer">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/053LXJ651Ds/hqdefault.jpg" alt="Omega 3 y Piel" loading="lazy">
+            <span class="play-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#C0714F"/><path d="M10 8.5l6 3.5-6 3.5V8.5Z" fill="#fff"/></svg></span>
+          </div>
+          <div class="video-info">
+            <span class="video-title">Omega 3 y Piel</span>
+            <span class="video-source">Dra. Mercedes Aguirre Lipperheide · Ver en YouTube</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </details>
+
+  <!-- DAY 7 -->
+  <details class="day">
+    <summary>
+      <div class="day-num">7</div>
+      <div class="day-meta">
+        <div class="day-title">Consolidación y evaluación de resultados</div>
+        <div class="day-focus">Integra los 6 pilares en tu rutina permanente</div>
+      </div>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="day-body">
+      <p>Hoy no aprendes nada nuevo — hoy integras. Repite en orden: respiración 4-7-8 → drenaje linfático → aplicación de productos con piel húmeda → higiene de luz. Evalúa frente al espejo: ¿notas menos hinchazón? ¿tu piel se siente más firme al tacto?</p>
+      <ul>
+        <li><b>Acción de hoy:</b> toma una foto de referencia con buena luz natural y compárala mentalmente con cómo lucías el Día 1.</li>
+        <li><b>Acción de hoy:</b> decide cuáles de los 6 pilares vas a mantener como rutina permanente — normalmente 3 son suficientes para sostener el resultado.</li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="section-label"><span>Respaldo Científico y Lecturas Recomendadas</span><div class="line"></div></div>
+  <p class="sci-quote">"Entender tu piel no es cuestión de fe, es cuestión de biología celular."</p>
+  <div class="refs-grid">
+    <div class="book-card">
+      <div class="book-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5a2 2 0 0 1 2-2h11v16H6a2 2 0 0 0-2 2V5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 3v16" stroke="currentColor" stroke-width="1.6"/></svg></div>
+      <div><div class="book-title">El Código Circadiano (The Circadian Code)</div><div class="book-author">Dr. Satchin Panda — Instituto Salk. Explica cómo cada órgano, incluida la piel, posee un reloj maestro interno y cómo su desincronía acelera el envejecimiento.</div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5a2 2 0 0 1 2-2h11v16H6a2 2 0 0 0-2 2V5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 3v16" stroke="currentColor" stroke-width="1.6"/></svg></div>
+      <div><div class="book-title">Skin Deep: A Mind/Body Program for Healthy Skin</div><div class="book-author">Ted A. Grossbart, PhD — Harvard Medical School. Detalla cómo el cortisol actúa como interruptor que bloquea la síntesis de colágeno y la reparación nocturna.</div></div>
+    </div>
+    <a class="paper-card" href="https://pubmed.ncbi.nlm.nih.gov/31641418/" target="_blank" rel="noopener noreferrer">
+      <div class="paper-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 10v6c0 1.5 2.7 3 6 3s6-1.5 6-3v-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+      <div><div class="paper-title">Circadian Rhythm and the Skin: A Review of the Literature</div><div class="paper-source">PubMed / The Journal of Clinical and Aesthetic Dermatology — la tasa mitótica de la epidermis alcanza su pico entre la medianoche y las 4:00 AM</div></div>
+    </a>
+    <a class="paper-card" href="https://pubmed.ncbi.nlm.nih.gov/?term=cortisol+effects+on+epidermal+barrier+function" target="_blank" rel="noopener noreferrer">
+      <div class="paper-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z" stroke="currentColor" stroke-width="1.6"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+      <div><div class="paper-title">Cortisol effects on epidermal barrier function</div><div class="paper-source">Búsqueda directa en PubMed.ncbi.nlm.nih.gov — estudios sobre cómo el cortisol elevado altera la función barrera y la hidratación trans-epidérmica</div></div>
+    </a>
+    <a class="paper-card" href="https://www.ted.com/talks/russell_foster_why_do_we_sleep" target="_blank" rel="noopener noreferrer">
+      <div class="paper-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 3a4 4 0 0 0-4 4v3a4 4 0 0 0 8 0V7a4 4 0 0 0-4-4Z" stroke="currentColor" stroke-width="1.6"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+      <div><div class="paper-title">Why do we sleep?</div><div class="paper-source">Charla TED — Russell Foster, neurocientífico circadiano, Universidad de Oxford</div></div>
+    </a>
+  </div>
+
+  <div class="closing">
+    <h2>No se trata de un truco de una noche</h2>
+    <p>Se trata de devolverle a tu piel el entorno hormonal en el que sabe regenerarse sola. Repite este ciclo de 7 días una vez al mes y usa el Diario de Sueño y Piel para registrar tu evolución real.</p>
+    <a class="closing-btn" href="diario-sueno-piel.html">
+      Ir a mi Diario de Sueño y Piel
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+
+  <p class="footer-note">Playbook de Reseteo Celular — Método CÉLOS · Céfiro Bio-Piel. Contenido educativo e informativo; no reemplaza una valoración dermatológica profesional.</p>
+</div>
+
+<script>
+(function(){
+  var THEME_KEY = "cefiro_theme_pref";
+  function applyTheme(t){
+    document.documentElement.setAttribute("data-theme", t);
+    document.getElementById("themeIcon").innerHTML = t === "dark"
+      ? '<circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>'
+      : '<path d="M21 12.5A8.5 8.5 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>';
+  }
+  var current = "light";
+  try{ current = localStorage.getItem(THEME_KEY) || "light"; }catch(e){}
+  applyTheme(current);
+  document.getElementById("themeToggle").addEventListener("click", function(){
+    current = current === "dark" ? "light" : "dark";
+    applyTheme(current);
+    try{ localStorage.setItem(THEME_KEY, current); }catch(e){}
+  });
+})();
+</script>
+</body>
+</html>

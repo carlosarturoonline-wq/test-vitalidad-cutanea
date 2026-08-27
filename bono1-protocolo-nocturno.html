@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bono 1 — Protocolo Anti-Estrés Nocturno | Céfiro Bio-Piel</title>
+<meta name="description" content="Guía paso a paso para neutralizar el cortisol acumulado antes de dormir y reactivar la regeneración celular profunda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sage:#8A9A86; --sage-deep:#6F8069; --sage-bright:#A9BBA1;
+    --cream:#F4F0EA; --white:#FFFFFF; --ink:#2B2F27; --ink-soft:#5B6155;
+    --alert:#C0714F; --alert-soft:#F2E3DA; --line:rgba(43,47,39,0.10);
+    --shadow-sm:0 2px 10px rgba(43,47,39,0.06); --shadow-md:0 10px 30px rgba(43,47,39,0.10);
+    --radius:20px; --radius-sm:12px;
+    --font-head:'Poppins','Segoe UI',system-ui,sans-serif; --font-body:'Inter','Segoe UI',system-ui,sans-serif;
+    --bg:var(--cream); --surface:var(--white); --text:var(--ink); --text-muted:var(--ink-soft); --border:var(--line);
+  }
+  html[data-theme="dark"]{
+    --bg:#1B1F19; --surface:#242922; --text:#EEEFE9; --text-muted:#A7AC9F;
+    --border:rgba(255,255,255,0.08); --shadow-sm:0 2px 10px rgba(0,0,0,0.25); --shadow-md:0 10px 30px rgba(0,0,0,0.35);
+    --alert-soft:rgba(192,113,79,0.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.brand{font-family:var(--font-head);}
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px 80px;}
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:22px 0;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;color:var(--sage-deep);}
+  html[data-theme="dark"] .brand{color:var(--sage-bright);}
+  .brand svg{width:22px;height:22px;}
+  .theme-toggle{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text);}
+  .theme-toggle svg{width:16px;height:16px;}
+
+  .hero{text-align:center;padding:20px 0 40px;}
+  .kicker{display:inline-block;background:var(--alert-soft);color:var(--alert);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 16px;border-radius:999px;margin-bottom:18px;}
+  h1.title{font-size:clamp(26px,4.6vw,36px);font-weight:700;letter-spacing:-.01em;margin-bottom:14px;line-height:1.2;}
+  .lede{font-size:16.5px;color:var(--text-muted);max-width:520px;margin:0 auto;}
+
+  .intro-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-md);padding:30px 32px;margin-bottom:40px;}
+  .intro-card p{color:var(--text-muted);margin-bottom:12px;}
+  .intro-card p:last-child{margin-bottom:0;}
+
+  details.pillar{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);margin-bottom:20px;overflow:hidden;}
+  details.pillar[open]{box-shadow:var(--shadow-md);}
+  details.pillar summary{list-style:none;cursor:pointer;padding:24px 28px;display:flex;align-items:center;gap:14px;}
+  details.pillar summary::-webkit-details-marker{display:none;}
+  .pillar-icon{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--sage-bright),var(--sage-deep));display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .pillar-icon svg{width:22px;height:22px;color:#fff;}
+  .pillar-title{font-weight:700;font-size:17px;}
+  .pillar-time{font-size:12.5px;color:var(--text-muted);}
+  .pillar-chevron{width:20px;height:20px;color:var(--text-muted);transition:transform .2s ease;flex-shrink:0;margin-left:auto;}
+  details.pillar[open] .pillar-chevron{transform:rotate(180deg);}
+  .pillar-body{padding:0 28px 26px;}
+  .pillar-body p{color:var(--text-muted);margin-bottom:12px;}
+  .pillar-body ul{padding-left:20px;margin-bottom:14px;}
+  .pillar-body li{color:var(--text-muted);margin-bottom:8px;}
+  .pillar-body li b{color:var(--text);}
+  .accordion-hint{display:flex;align-items:center;gap:8px;color:var(--text-muted);font-size:13.5px;margin:0 0 18px;}
+  .accordion-hint svg{width:16px;height:16px;color:var(--sage-deep);flex-shrink:0;}
+  html[data-theme="dark"] .accordion-hint svg{color:var(--sage-bright);}
+
+  .resource-row{display:flex;flex-direction:column;gap:12px;margin-top:14px;}
+  .video-card{display:flex;gap:12px;align-items:center;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;background:var(--bg);text-decoration:none;padding:8px;transition:transform .15s ease, box-shadow .15s ease;}
+  .video-card:hover{transform:translateY(-1px);box-shadow:var(--shadow-sm);}
+  .video-thumb{position:relative;width:96px;height:64px;flex-shrink:0;border-radius:8px;overflow:hidden;background:#000;}
+  .video-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .play-badge{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+  .play-badge svg{width:26px;height:26px;filter:drop-shadow(0 1px 4px rgba(0,0,0,.5));}
+  .video-info{flex:1;min-width:0;}
+  .video-title{display:block;font-size:13.5px;font-weight:700;color:var(--text);margin-bottom:2px;}
+  .video-source{display:block;font-size:11.5px;color:var(--text-muted);}
+
+  .section-label{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin:36px 0 16px;}
+
+  .plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px;}
+  @media (max-width:520px){.plan-grid{grid-template-columns:1fr;}}
+  .plan-block{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 20px;}
+  .plan-block h3{font-size:14px;margin-bottom:8px;color:var(--sage-deep);}
+  html[data-theme="dark"] .plan-block h3{color:var(--sage-bright);}
+  .plan-block p{font-size:13.5px;color:var(--text-muted);margin:0;}
+
+  .book-card{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;background:var(--bg);}
+  .book-icon{width:34px;height:34px;border-radius:9px;background:rgba(138,154,134,0.16);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .book-icon svg{width:17px;height:17px;color:var(--sage-deep);}
+  html[data-theme="dark"] .book-icon svg{color:var(--sage-bright);}
+  .book-title{font-size:13.5px;font-weight:700;}
+  .book-author{font-size:12px;color:var(--text-muted);}
+
+  .paper-card{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;background:var(--bg);text-decoration:none;transition:transform .15s ease, box-shadow .15s ease;}
+  .paper-card:hover{transform:translateY(-1px);box-shadow:var(--shadow-sm);}
+  .paper-icon{width:34px;height:34px;border-radius:9px;background:var(--alert-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .paper-icon svg{width:17px;height:17px;color:var(--alert);}
+  .paper-title{font-size:13.5px;font-weight:700;color:var(--text);}
+  .paper-source{font-size:12px;color:var(--text-muted);}
+  .refs-grid{display:flex;flex-direction:column;gap:12px;margin-bottom:10px;}
+  .sci-quote{font-style:italic;color:var(--text-muted);font-size:14px;margin:14px 0 16px;}
+
+  .download-btn{display:flex;align-items:center;gap:14px;width:100%;text-align:left;border:1.5px dashed var(--sage);background:rgba(138,154,134,0.08);border-radius:var(--radius-sm);padding:16px 18px;cursor:pointer;font-family:inherit;margin-bottom:10px;transition:background .15s ease;}
+  .download-btn:hover{background:rgba(138,154,134,0.16);}
+  .download-icon{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--sage-bright),var(--sage-deep));display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .download-text{flex:1;}
+  .download-title{font-weight:700;font-size:14px;color:var(--text);}
+  .download-sub{font-size:12px;color:var(--text-muted);margin-top:2px;}
+
+  .closing{background:linear-gradient(135deg,var(--sage-bright),var(--sage-deep));color:#fff;border-radius:var(--radius);padding:32px;text-align:center;margin-top:40px;}
+  .closing h2{font-size:20px;margin-bottom:8px;}
+  .closing p{opacity:.92;}
+  .footer-note{text-align:center;font-size:12px;color:var(--text-muted);margin-top:36px;opacity:.75;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 3-6 6-6 10a6 6 0 0 0 12 0c0-4-2-7-6-10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      Céfiro Bio-Piel
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+      <svg id="themeIcon" viewBox="0 0 24 24" fill="none"><path d="M21 12.5A8.5 8.5 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <div class="hero">
+    <span class="kicker">Bono 1 · Incluido en tu compra</span>
+    <h1 class="title">El Protocolo Anti-Estrés Nocturno</h1>
+    <p class="lede">Guía paso a paso para neutralizar el cortisol acumulado antes de dormir y reactivar la regeneración celular profunda.</p>
+  </div>
+
+  <div class="intro-card">
+    <p>Cada noche, cuando apagas las luces, tu cuerpo debería entrar en un modo de reparación intensiva. Pero si el estrés diario mantuvo tus niveles de cortisol elevados, tu piel se queda "atrapada" en un estado de alerta.</p>
+    <p>Este protocolo rompe ese ciclo en solo 10 minutos antes de dormir, preparando tus células para recibir nutrientes y activar la síntesis natural de colágeno.</p>
+  </div>
+
+  <div class="section-label">Tus 3 pilares, paso a paso</div>
+  <p class="accordion-hint"><svg viewBox="0 0 24 24" fill="none"><path d="M9 11.5V6a2 2 0 1 1 4 0v5.5M13 11V4a2 2 0 1 1 4 0v9M17 9.5V7a2 2 0 1 1 4 0v7c0 4-2.5 7-7 7h-1c-3 0-4.2-1-5.5-2.7L4.8 14a1.8 1.8 0 0 1 2.7-2.3l1.5 1.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Toca cada pilar para desplegarlo — dentro encontrarás la técnica paso a paso y su video de referencia.</p>
+
+  <!-- PILAR 1 -->
+  <details class="pillar" open>
+    <summary>
+      <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 3-6 6-6 10a6 6 0 0 0 12 0c0-4-2-7-6-10Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+      <div><div class="pillar-title">Pilar 1 — Desconexión y Activación Linfática Facial</div><div class="pillar-time">Minutos 1 a 4</div></div>
+      <svg class="pillar-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="pillar-body">
+      <p>La técnica de respiración diafragmática 4-7-8 desciende tus niveles de cortisol en sangre en menos de dos minutos. Después, un autodrenaje linfático exprés con las yemas de los dedos libera la tensión acumulada en la mandíbula y el contorno de ojos.</p>
+      <ul>
+        <li><b>Respiración:</b> inhala 4 seg. por la nariz, sostén 7 seg., exhala 8 seg. por la boca. 4 repeticiones.</li>
+        <li><b>Drenaje:</b> desde el centro del rostro hacia las orejas y el cuello, presión suave, sin estirar la piel.</li>
+      </ul>
+      <div class="resource-row">
+        <a class="video-card" href="https://www.youtube.com/watch?v=a4LxzATy-4Y" target="_blank" rel="noopener noreferrer">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/a4LxzATy-4Y/hqdefault.jpg" alt="Respiración relajante 4-7-8" loading="lazy">
+            <span class="play-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#C0714F"/><path d="M10 8.5l6 3.5-6 3.5V8.5Z" fill="#fff"/></svg></span>
+          </div>
+          <div class="video-info">
+            <span class="video-title">Respiración relajante 4-7-8</span>
+            <span class="video-source">#CuidarteEsCuidarnos · Ver en YouTube</span>
+          </div>
+        </a>
+        <a class="video-card" href="https://www.youtube.com/watch?v=PrCoqO76Hio" target="_blank" rel="noopener noreferrer">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/PrCoqO76Hio/hqdefault.jpg" alt="Tutorial masaje para drenaje linfático" loading="lazy">
+            <span class="play-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#C0714F"/><path d="M10 8.5l6 3.5-6 3.5V8.5Z" fill="#fff"/></svg></span>
+          </div>
+          <div class="video-info">
+            <span class="video-title">Tutorial: masaje para drenaje linfático</span>
+            <span class="video-source">Cristina, enfermera · Ver en YouTube</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </details>
+
+  <!-- PILAR 2 -->
+  <details class="pillar">
+    <summary>
+      <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="8" stroke="#fff" stroke-width="1.8"/></svg></div>
+      <div><div class="pillar-title">Pilar 2 — El Timing de Aplicación Bio-Activa</div><div class="pillar-time">Minutos 5 a 7</div></div>
+      <svg class="pillar-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="pillar-body">
+      <p>Aplicar tus productos con la piel ligeramente húmeda multiplica por tres la absorción celular, porque el agua actúa como vehículo para los principios activos a través del estrato córneo.</p>
+      <ul>
+        <li><b>Orden correcto:</b> del ingrediente de menor al mayor peso molecular — sérums acuosos primero, cremas oclusivas al final.</li>
+        <li><b>Truco:</b> aplica sobre la piel recién tonificada, sin secar por completo, para aprovechar esa ventana de absorción.</li>
+      </ul>
+    </div>
+  </details>
+
+  <!-- PILAR 3 -->
+  <details class="pillar">
+    <summary>
+      <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M21 12.5A8.5 8.5 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+      <div><div class="pillar-title">Pilar 3 — Sintonización del Ritmo Circadiano</div><div class="pillar-time">Minutos 8 a 10</div></div>
+      <svg class="pillar-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="pillar-body">
+      <p>La luz azul del dormitorio suprime la melatonina y retrasa la señal que le indica a tu piel cuándo empezar a repararse. La posición en la que duermes también importa: la presión mecánica de la almohada contra el rostro acelera las líneas de expresión.</p>
+      <ul>
+        <li><b>Higiene de luz:</b> apaga pantallas y usa luz cálida tenue 30 min antes de dormir.</li>
+        <li><b>Postura:</b> dormir boca arriba evita la presión directa sobre pómulos y frente.</li>
+      </ul>
+      <div class="resource-row">
+        <div class="book-card">
+          <div class="book-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5a2 2 0 0 1 2-2h11v16H6a2 2 0 0 0-2 2V5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 3v16" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <div><div class="book-title">El Código Circadiano (The Circadian Code)</div><div class="book-author">Dr. Satchin Panda — Instituto Salk de Estudios Biológicos</div></div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <div class="section-label">Plan de acción de 7 días</div>
+  <div class="plan-grid">
+    <div class="plan-block">
+      <h3>Días 1 a 3</h3>
+      <p>Enfoque en la bajada de inflamación celular mediante la respiración y el drenaje suave.</p>
+    </div>
+    <div class="plan-block">
+      <h3>Días 4 a 7</h3>
+      <p>Consolidación de la rutina y evaluación visual de la luminosidad al despertar.</p>
+    </div>
+  </div>
+
+  <div class="section-label">Tu Recurso Descargable</div>
+  <button class="download-btn" onclick="downloadRutina()">
+    <div class="download-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0 4-4m-4 4-4-4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+    <div class="download-text">
+      <div class="download-title">Descargar Checklist: Rutina Nocturna de 10 Minutos</div>
+      <div class="download-sub">Imprímela y pégala en tu espejo — incluye tracker semanal de 7 días</div>
+    </div>
+  </button>
+
+  <div class="section-label"><span>Respaldo Científico y Lecturas Recomendadas</span></div>
+  <p class="sci-quote">"Entender tu piel no es cuestión de fe, es cuestión de biología celular."</p>
+  <div class="refs-grid">
+    <div class="book-card">
+      <div class="book-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5a2 2 0 0 1 2-2h11v16H6a2 2 0 0 0-2 2V5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 3v16" stroke="currentColor" stroke-width="1.6"/></svg></div>
+      <div><div class="book-title">Skin Deep: A Mind/Body Program for Healthy Skin</div><div class="book-author">Ted A. Grossbart, PhD — Harvard Medical School. Cómo el cortisol bloquea la síntesis de colágeno y la reparación nocturna.</div></div>
+    </div>
+    <a class="video-card" href="https://www.youtube.com/watch?v=F4kzlyys1bA" target="_blank" rel="noopener noreferrer">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/F4kzlyys1bA/hqdefault.jpg" alt="Cronobiología: una guía para descubrir tu reloj biológico" loading="lazy">
+        <span class="play-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#C0714F"/><path d="M10 8.5l6 3.5-6 3.5V8.5Z" fill="#fff"/></svg></span>
+      </div>
+      <div class="video-info">
+        <span class="video-title">Cronobiología: una guía para descubrir tu reloj biológico</span>
+        <span class="video-source">Juan Antonio Madrid · Fac. de Veterinaria, UCM · Ver en YouTube</span>
+      </div>
+    </a>
+    <a class="paper-card" href="https://pubmed.ncbi.nlm.nih.gov/?term=cortisol+effects+on+epidermal+barrier+function" target="_blank" rel="noopener noreferrer">
+      <div class="paper-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z" stroke="currentColor" stroke-width="1.6"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+      <div><div class="paper-title">Cortisol effects on epidermal barrier function</div><div class="paper-source">Búsqueda directa en PubMed.ncbi.nlm.nih.gov</div></div>
+    </a>
+  </div>
+
+  <div class="closing">
+    <h2>10 minutos, todas las noches</h2>
+    <p>La consistencia importa más que la perfección. Combina este bono con tu Playbook de Reseteo Celular para el protocolo completo de 7 días.</p>
+  </div>
+
+  <p class="footer-note">Bono 1: El Protocolo Anti-Estrés Nocturno · Céfiro Bio-Piel. Contenido educativo e informativo; no reemplaza una valoración dermatológica profesional.</p>
+</div>
+
+<script>
+(function(){
+  var THEME_KEY = "cefiro_theme_pref";
+  function applyTheme(t){
+    document.documentElement.setAttribute("data-theme", t);
+    document.getElementById("themeIcon").innerHTML = t === "dark"
+      ? '<circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>'
+      : '<path d="M21 12.5A8.5 8.5 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>';
+  }
+  var current = "light";
+  try{ current = localStorage.getItem(THEME_KEY) || "light"; }catch(e){}
+  applyTheme(current);
+  document.getElementById("themeToggle").addEventListener("click", function(){
+    current = current === "dark" ? "light" : "dark";
+    applyTheme(current);
+    try{ localStorage.setItem(THEME_KEY, current); }catch(e){}
+  });
+})();
+
+function downloadDoc(filename, docTitle, bodyHtml){
+  var style = `
+    body{font-family:'Inter',system-ui,sans-serif;background:#F4F0EA;color:#2B2F27;line-height:1.65;margin:0;padding:0 0 50px;}
+    .hero{background:linear-gradient(135deg,#A9BBA1,#6F8069);color:#fff;padding:46px 32px 38px;text-align:center;border-radius:0 0 28px 28px;margin-bottom:34px;}
+    .hero svg{width:52px;height:52px;margin:0 auto 14px;display:block;}
+    .hero h1{font-family:'Poppins',system-ui,sans-serif;font-size:25px;margin:0 0 8px;}
+    .hero p{opacity:.92;font-size:13.5px;margin:0 auto;max-width:400px;}
+    .wrap{max-width:600px;margin:0 auto;padding:0 28px;}
+    h2.section{font-family:'Poppins',system-ui,sans-serif;font-size:14px;color:#6F8069;text-transform:uppercase;letter-spacing:.05em;margin:32px 0 14px;display:flex;align-items:center;gap:10px;}
+    h2.section .num{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#A9BBA1,#6F8069);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;}
+    .item{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:#fff;border:1px solid rgba(43,47,39,0.08);border-radius:12px;margin-bottom:10px;}
+    .item .dot{width:20px;height:20px;border:2px solid #8A9A86;border-radius:6px;flex-shrink:0;margin-top:1px;}
+    .item .txt b{display:block;font-size:14px;color:#2B2F27;margin-bottom:2px;}
+    .item .txt span{font-size:12.5px;color:#5B6155;}
+    table{width:100%;border-collapse:collapse;margin-top:6px;border-radius:10px;overflow:hidden;}
+    th,td{border:1px solid rgba(43,47,39,0.10);padding:10px 6px;text-align:center;font-size:12px;}
+    th{background:#6F8069;color:#fff;font-weight:700;}
+    td{background:#fff;height:34px;}
+    .foot{margin-top:40px;font-size:11px;color:#5B6155;text-align:center;opacity:.75;}
+    .badge{display:inline-block;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:3px 9px;border-radius:999px;margin-right:6px;margin-bottom:6px;color:#fff;}
+    .recipe{background:#fff;border-radius:16px;padding:20px 22px;margin-bottom:16px;border:1px solid rgba(43,47,39,0.08);box-shadow:0 2px 10px rgba(43,47,39,0.05);}
+    .recipe-head{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+    .recipe-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;}
+    .recipe h3{font-family:'Poppins',system-ui,sans-serif;font-size:15.5px;margin:0;color:#2B2F27;}
+    .recipe p{font-size:13.5px;color:#5B6155;margin:0 0 10px;}
+    .why{background:#F2E3DA;border-left:3px solid #C0714F;border-radius:8px;padding:10px 14px;font-size:12.5px;color:#2B2F27;}
+    .why b{color:#C0714F;}
+    .cat-block{margin-bottom:26px;}
+    .cat-head{display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:10px;color:#fff;font-family:'Poppins',system-ui,sans-serif;font-size:14px;font-weight:600;margin-bottom:10px;}
+    .cat-head svg{width:18px;height:18px;}
+  `;
+  var html = `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>${docTitle}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>${style}</style></head><body>${bodyHtml}<p class="foot">Céfiro Bio-Piel — Contenido educativo e informativo; no reemplaza una valoración profesional.</p></body></html>`;
+  var blob = new Blob([html], {type:"text/html"});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement("a");
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+}
+
+function downloadRutina(){
+  var hero = `<div class="hero"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c-4.5-3-8-6.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 4.5-3.5 8-8 11-.7.47-1.3.47-2 0Z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    <h1>Rutina Nocturna de 10 Minutos</h1><p>Imprime esta hoja y pégala en tu espejo. Marca cada paso, cada noche — la consistencia es lo que resetea tu ciclo celular.</p></div>`;
+  var body = hero + `<div class="wrap">
+    <h2 class="section"><span class="num">1</span>Desconexión y Activación Linfática · Min. 1-4</h2>
+    <div class="item"><div class="dot"></div><div class="txt"><b>Respiración 4-7-8 — 4 ciclos</b><span>Inhala 4 seg. por la nariz, sostén 7 seg., exhala 8 seg. por la boca. Baja el cortisol en menos de 2 minutos.</span></div></div>
+    <div class="item"><div class="dot"></div><div class="txt"><b>Drenaje linfático facial exprés — 3 a 4 min.</b><span>Desde el centro del rostro hacia las orejas y el cuello, presión suave, sin estirar la piel.</span></div></div>
+    <h2 class="section"><span class="num">2</span>Timing de Aplicación Bio-Activa · Min. 5-7</h2>
+    <div class="item"><div class="dot"></div><div class="txt"><b>Piel ligeramente húmeda</b><span>Multiplica por 3 la absorción de tus productos antes de aplicarlos.</span></div></div>
+    <div class="item"><div class="dot"></div><div class="txt"><b>Orden correcto de aplicación</b><span>Sérums acuosos primero, cremas oclusivas al final — de menor a mayor peso molecular.</span></div></div>
+    <h2 class="section"><span class="num">3</span>Ritmo Circadiano · Min. 8-10</h2>
+    <div class="item"><div class="dot"></div><div class="txt"><b>Pantallas apagadas / luz cálida tenue</b><span>Evita suprimir la melatonina justo antes de dormir.</span></div></div>
+    <div class="item"><div class="dot"></div><div class="txt"><b>Dormir boca arriba</b><span>Sin presión mecánica de la almohada sobre pómulos y frente.</span></div></div>
+    <h2 class="section"><span class="num">✓</span>Tu Tracker Semanal</h2>
+    <table><tr><th>L</th><th>M</th><th>M</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table>
+    </div>`;
+  downloadDoc("rutina-nocturna-cefiro.html", "Rutina Nocturna — Céfiro Bio-Piel", body);
+}
+</script>
+</body>
+</html>
