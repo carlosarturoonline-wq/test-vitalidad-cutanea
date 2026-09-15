@@ -524,6 +524,16 @@
   .guarantee-row svg{ width:15px;height:15px; color: var(--sage-deep);}
   html[data-theme="dark"] .guarantee-row svg{ color: var(--sage-bright); }
 
+  .guarantee-box{
+    display:flex; align-items:flex-start; gap:12px;
+    background: var(--sage-soft, rgba(138,154,134,0.1)); border:1px solid var(--border);
+    border-radius:14px; padding:16px 18px; margin-top:16px;
+  }
+  .guarantee-box svg{ width:26px;height:26px; flex-shrink:0; color: var(--sage-deep); margin-top:2px; }
+  html[data-theme="dark"] .guarantee-box svg{ color: var(--sage-bright); }
+  .guarantee-box b{ display:block; font-size:14.5px; color: var(--ink); margin-bottom:4px; }
+  .guarantee-box p{ font-size:12.5px; color: var(--text-muted); line-height:1.5; }
+
   .footer-note{
     text-align:center; font-size:12px; color: var(--text-muted); margin-top:22px; opacity:.75;
   }
@@ -802,7 +812,15 @@ fbq('track', 'PageView');
 
       <div class="urgency">
         <svg viewBox="0 0 24 24" fill="none"><path d="M12 8v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg>
-        Precio de lanzamiento disponible únicamente desde esta sesión de diagnóstico.
+        Precio de lanzamiento: $21 USD (precio regular $34 USD) — disponible solo durante esta primera fase.
+      </div>
+
+      <div class="guarantee-box">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <div>
+          <b>Garantía de 7 días, sin preguntas.</b>
+          <p>Si sigues el protocolo y sientes que no es para ti, escríbenos dentro de los primeros 7 días y te devolvemos el 100% de tu dinero. Sin letra pequeña.</p>
+        </div>
       </div>
 
       <div class="guarantee-row">
