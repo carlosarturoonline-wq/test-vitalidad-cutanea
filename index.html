@@ -867,6 +867,12 @@ fbq('track', 'PageView');
     ]
   };
 
+  const RESULT_INTRO_BY_FOCUS = {
+    q1: "Esto significa que la piel de tu rostro ya está mostrando físicamente las señales de una noche que no cumplió su función reparadora — y seguirá empeorando mientras el mecanismo de fondo no se corrija.",
+    q2: "Esto significa que, aunque sientas que duermes \"suficiente\", tu piel nunca llega a entrar en su fase de regeneración profunda — se queda atrapada en modo de alerta toda la noche.",
+    q3: "Esto significa que tu piel recibe la señal equivocada justo antes de dormir: en vez de repararse, se mantiene en estado de alerta por el cortisol que tu rutina nocturna sigue activando."
+  };
+
   const MECHANISM_BY_FOCUS = {
     q1: "El signo que elegiste en el espejo es la huella visible de los micro-despertares nocturnos: mantienen los vasos sanguíneos del rostro contraídos y evitan que la piel reciba oxígeno y nutrientes mientras duermes.",
     q2: "Tu patrón de sueño confirma el origen del problema: no es falta de horas, es la fragmentación del descanso profundo lo que impide que tu piel entre en su ventana natural de regeneración celular.",
@@ -1074,8 +1080,7 @@ fbq('track', 'PageView');
     if(vitality >= 30) alertLabel = "Nivel de alerta: estrés nocturno moderado";
     document.getElementById("resultAlertLabel").textContent = alertLabel;
 
-    document.getElementById("resultIntro").textContent =
-      "Esto significa que tu piel está atrapada en un estado de alerta durante la noche, cuando debería estar regenerándose.";
+    document.getElementById("resultIntro").textContent = RESULT_INTRO_BY_FOCUS[focus];
 
     document.getElementById("mechanismText").innerHTML =
       MECHANISM_BY_FOCUS[focus];
