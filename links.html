@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Céfiro Bio-Piel — Enlaces</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sage:#8A9A86; --sage-deep:#6F8069; --sage-bright:#A9BBA1;
+    --cream:#F4F0EA; --white:#FFFFFF; --ink:#2B2F27; --ink-soft:#5B6155;
+    --border:rgba(43,47,39,0.12);
+    --font-head:'Poppins','Segoe UI',system-ui,sans-serif; --font-body:'Inter','Segoe UI',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:var(--font-body);
+    background:linear-gradient(180deg,var(--sage-bright),var(--cream) 40%);
+    color:var(--ink); min-height:100vh; display:flex; justify-content:center;
+    padding:48px 20px;
+  }
+  .page{max-width:420px; width:100%; text-align:center;}
+
+  .logo-badge{
+    width:88px; height:88px; border-radius:50%; background:var(--white);
+    display:flex; align-items:center; justify-content:center; margin:0 auto 16px;
+    box-shadow:0 8px 24px rgba(43,47,39,0.12);
+  }
+  .logo-badge svg{ width:44px; height:44px; }
+
+  h1{font-family:var(--font-head); font-size:22px; letter-spacing:.02em; margin-bottom:4px;}
+  .tagline{font-size:13.5px; color:var(--ink-soft); margin-bottom:32px;}
+
+  .link-list{display:flex; flex-direction:column; gap:14px;}
+  .link-btn{
+    display:block; background:var(--white); border:1px solid var(--border);
+    border-radius:16px; padding:18px 22px; text-decoration:none; color:var(--ink);
+    font-weight:600; font-size:15px; transition:transform .15s ease, box-shadow .15s ease;
+    box-shadow:0 2px 8px rgba(43,47,39,0.05);
+  }
+  .link-btn:hover{ transform:translateY(-2px); box-shadow:0 6px 16px rgba(43,47,39,0.1); }
+  .link-btn.primary{
+    background:linear-gradient(135deg,var(--sage-bright),var(--sage-deep));
+    color:#fff; border:none;
+  }
+  .link-sub{display:block; font-weight:400; font-size:12.5px; margin-top:3px; opacity:.85;}
+
+  .affiliate-note{
+    font-size:11px; color:var(--ink-soft); margin-top:6px; font-style:italic;
+  }
+
+  .footer{margin-top:40px; font-size:11.5px; color:var(--ink-soft);}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="logo-badge">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-3 3-5 6-5 9a5 5 0 0 0 10 0c0-3-2-6-5-9Z" stroke="#6F8069" stroke-width="1.6" stroke-linejoin="round"/></svg>
+  </div>
+
+  <h1>CÉFIRO BIO-PIEL</h1>
+  <p class="tagline">Ciencia del sueño aplicada a tu piel 🌙</p>
+
+  <div class="link-list">
+    <a class="link-btn primary" href="https://test-vitalidad-cut-nea.vercel.app/" target="_blank" rel="noopener noreferrer">
+      👉 Haz tu Test de Vitalidad Cutánea (Gratis)
+    </a>
+
+    <a class="link-btn" href="https://go.hotmart.com/M107819830K?ap=17aa" target="_blank" rel="noopener noreferrer">
+      🧘 Yoga para Conciliar el Sueño
+      <span class="link-sub">Recurso recomendado para calmar la mente antes de dormir</span>
+    </a>
+  </div>
+
+  <p class="affiliate-note">Algunos enlaces son de afiliado: si compras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Solo recomendamos lo que consideramos de valor real.</p>
+
+  <p class="footer">© 2026 Céfiro Bio-Piel</p>
+
+</div>
+</body>
+</html>
